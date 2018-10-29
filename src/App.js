@@ -224,7 +224,11 @@ class App extends Component {
     *                                styling react components                               *
     *****************************************************************************************/
     render () {
-        return <h1> third part project </h1>
+        const style = { backgroundColor: 'green' }
+        let classes = []
+        if(true) classes.push('red')
+        if(true) classes.push('bold')
+        return <div class={classes.join(' ')} style={style}> third part project </div>
     }
 }
 
