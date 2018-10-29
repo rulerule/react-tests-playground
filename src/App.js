@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+//import Radium from 'radium' TESTING
 import './styles/App.css'
 
 //import Person from './components/Person'     FIRST LESSON
 
-// import UserInput from './components/exercise1/UserInput'   FIRST EXERCISE
-// import UserOutput from './components/exercise1/UserOutput' FIRSR EXERCISE
+ //import UserInput from './components/exercise1/UserInput'   //FIRST EXERCISE
+ //import UserOutput from './components/exercise1/UserOutput' //FIRSR EXERCISE
 
 //import Person from './components/Person' //SECOND LESSON
 
@@ -224,12 +225,25 @@ class App extends Component {
     *                                styling react components                               *
     *****************************************************************************************/
     render () {
-        const style = { backgroundColor: 'green' }
+        const style = {
+            backgroundColor: 'green',
+            // ':hover': {
+            //     backgroundColor: 'blue'
+            // },
+            // '@media (min-width: 500px)': {
+            //     width:'250px'
+            // }
+        }
         let classes = []
         if(true) classes.push('red')
         if(true) classes.push('bold')
-        return <div class={classes.join(' ')} style={style}> third part project </div>
+        return (
+            <div class={classes.join(' ')} style={style}>
+                <p> third part project </p>
+            </div>
+        )
     }
 }
 
-export default App;
+//export default Radium(App);
+export default App
